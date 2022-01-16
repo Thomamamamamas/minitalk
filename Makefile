@@ -6,7 +6,7 @@
 #    By: tcasale <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/11 15:25:37 by tcasale           #+#    #+#              #
-#    Updated: 2022/01/11 16:56:30 by tcasale          ###   ########.fr        #
+#    Updated: 2022/01/16 12:34:56 by tcasale          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,8 +31,7 @@ RM		= rm -f
 
 all:	$(NAME)
 
-$(NAME):	$(SERVER)
-			$(CLIENT)
+$(NAME):	libft $(SERVER) $(CLIENT)
 
 $(SERVER):	$(SERVEROBJ) ./libft/libft.a
 			$(CC) $(SERVEROBJ) ./libft/libft.a -o $(SERVER)
